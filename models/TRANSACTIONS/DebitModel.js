@@ -18,7 +18,7 @@ const DebitSchema = mongoose.Schema(
         ExpiryDate: {
             type: Number,
             required: true,
-        },
+        }
     },
     { timestamps: true }
 );
