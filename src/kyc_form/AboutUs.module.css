@@ -1,0 +1,100 @@
+/* Import the custom font */
+@import url('https://fonts.googleapis.com/css2?family=Freigeist+Con:wght@400;600;700&display=swap');
+
+.aboutContainer {
+  width: 80%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f4f7fc;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Freigeist Con', sans-serif;
+  text-align: center;
+}
+.Container1{
+  background: url('./assets/background.gif') center/cover no-repeat; /* Using GIF as background */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Take full height of the viewport */
+
+}
+
+.title {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.features,
+.mission,
+.team {
+  margin-bottom: 40px;
+}
+
+.features h3,
+.mission h3,
+.team h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.featuresList li {
+  margin-bottom: 20px;
+}
+
+.featuresList li strong {
+  color: #007bff;
+}
+
+.featuresList li:before {
+  content: "•";
+  color: #007bff;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.mission p,
+.team p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .description,
+  .featuresList,
+  .mission p,
+  .team p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,62 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* App container */
+  .App {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Heading Style */
+  h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  /* Button Style */
+  button {
+    background-color: #F37254; /* Razorpay theme color */
+    color: white;
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button Hover Effect */
+  button:hover {
+    background-color: #e14d3c; /* Darker shade on hover */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .App {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 28px;
+    }
+  
+    button {
+      font-size: 16px;
+      padding: 10px 25px;
+    }
+  }
+  

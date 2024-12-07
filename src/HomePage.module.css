@@ -1,0 +1,298 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Freigeist+Con:wght@400;600;700&display=swap');
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styles */
+.container {
+  position: absolute;
+  width: 98%;
+  height: 100vh;
+  overflow: auto;
+  background: url('./assets/background.gif') center/cover no-repeat;
+  font-family: 'Freigeist Con', sans-serif;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-top: 50px;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Right-side image */
+.imageRight {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  width: 500px;
+  height: auto;
+}
+
+/* Logo styles */
+.logo {
+  position: absolute;
+  left: -400px; /* Place the logo on the left side */
+  width: 150px; /* Make the logo bigger */
+  height: auto;
+  z-index: 10; /* Make sure the logo is in front */
+}
+
+/* Content styles */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 23%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #000000;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.heading {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+  padding-left: 400px; /* Added padding to shift heading slightly to the right */
+}
+
+.heading span {
+  display: inline-block;
+  color: #000000;
+  animation: typing 3s steps(20, end) infinite, blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+}
+
+/* Typing animation */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+/* Navbar styles */
+.navbar {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  height: 60px;
+  padding: 0 10px;
+  background-color: #ffefef;
+  border-radius: 30px;
+}
+
+/* Navbar links */
+.navbar a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #5e35b1;
+}
+
+/* Button styles */
+.button {
+  background-color: #ffefef;
+  height: 60px;
+  color: #000000;
+  border: none;
+  top: 40px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  right: 150px;
+}
+
+.button1 {
+  background-color: #ffefef;
+  color: #000000;
+  border: none;
+  top: 40px;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: rgb(11, 113, 169);
+  transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  /* Adjust logo size */
+  .logo {
+    width: 120px;
+  }
+
+  /* Navbar layout */
+  .navbar {
+    width: 60%; /* Increase width of navbar */
+  }
+
+  /* Adjust content */
+  .heading {
+    font-size: 3rem;
+    padding-left: 200px;
+  }
+
+  /* Adjust button placement */
+  .button {
+    right: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Adjust navbar layout for medium screens */
+  .navbar {
+    width: 80%; /* Increase width */
+    flex-direction: column;
+    align-items: flex-start;
+    top: 20px;
+  }
+
+  /* Logo position */
+  .logo {
+    left: 0;
+    width: 100px;
+    top: 20px; /* Adjust logo position */
+  }
+
+  /* Adjust content */
+  .content {
+    left: 15%;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+    padding-left: 0;
+  }
+
+  /* Buttons */
+  .button {
+    right: 20px;
+  }
+
+  .button1 {
+    right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Full width navbar and better alignment */
+  .navbar {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    top: 10px;
+  }
+
+  /* Logo */
+  .logo {
+    width: 90px;
+    margin-bottom: 20px;
+  }
+
+  /* Heading size */
+  .heading {
+    font-size: 2rem;
+  }
+
+  .content {
+    left: 10%;
+  }
+
+  .button, .button1 {
+    position: static;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Smaller adjustments for mobile screens */
+  .logo {
+    width: 80px;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .navbar a {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .button1 {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .content {
+    left: 5%;
+  }
+}
